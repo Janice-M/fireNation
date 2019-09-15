@@ -74,7 +74,7 @@ class PostTest(TestCase):
         self.profile = Profile.objects.create(
             user=self.user, email='jan@gmail.com', contact='contact')
 
-        self.post = Post.objects.create(name='sample_post',
+        self.post = Post.objects.create(name='sampleText',
                                         image='images/', description='desc')
 
     def test_instance(self):
@@ -87,5 +87,7 @@ class PostTest(TestCase):
 
     def test_search_post(self):
         self.post.save()
-        post = Post.search_by_name('sample_post')
+        post = Post.search_by_name('sampleText')
         self.assertTrue(len(post) > 0)
+
+
