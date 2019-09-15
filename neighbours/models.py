@@ -11,9 +11,7 @@ class Profile(models.Model):
     contact = HTMLField()
     email = models.EmailField(max_length=70, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    '''
-    this is added to ensure the linter has no errors saying class has no objects member in VS Code IDE
-    '''
+    
     objects = models.Manager()
 
     def save_profile(self):
@@ -45,16 +43,14 @@ class Profile(models.Model):
 
 class Neighborhood(models.Model):
     locality = models.CharField(
-        max_length=30, default="e.g Nairobi, Juja, Kiambu etc")
+        max_length=30, default="e.g Aries, Sagittarius, Leo")
     name = models.CharField(max_length=30)
     occupants_count = models.IntegerField(default=0, blank=True)
     # profile=models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
     user_profile = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='hoods', blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    '''
-    this is added to ensure the linter has no errors saying class has no objects member in VS Code IDE
-    '''
+    
     objects = models.Manager()
 
     @classmethod
@@ -120,9 +116,6 @@ class Business(models.Model):
 
 
 class Join(models.Model):
-    '''
-Updating user location each time they join or leave a neghborhood	
-'''
     user_id = models.OneToOneField(User)
     hood_id = models.ForeignKey(Neighborhood)
 
