@@ -115,9 +115,10 @@ class Business(models.Model):
         return businesses
 
 
+
 class Join(models.Model):
-    user_id = models.OneToOneField(User)
-    hood_id = models.ForeignKey(Neighborhood)
+    user_id = models.OneToOneField(User , on_delete=models.CASCADE, null=True)
+    hood_id = models.ForeignKey(Neighborhood, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.user_id
