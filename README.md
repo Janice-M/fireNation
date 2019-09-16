@@ -6,7 +6,7 @@ Fire Nation is a community app for members of the fire signs of the zodiac  made
 
 ## Getting Started/Setup
 
-* `git clone https://github.com/Janice-M/grey-gram.git`
+* `git clone https://github.com/Janice-M/fireNation.git`
 
 ##### Create a virtuual
 * Creating Virtualenv - unlimited virtual
