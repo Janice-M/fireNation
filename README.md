@@ -2,7 +2,7 @@
 
 Fire Nation is a community app for members of the fire signs of the zodiac  made using  Python's Django Framework.
 
-![screenshot](/static/images/Screenshot1.png)
+![screenshot](neighbours/static/images/Screenshot1.png)
 
 ## Getting Started/Setup
 
