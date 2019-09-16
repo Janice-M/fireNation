@@ -1,0 +1,1 @@
+web: gunicorn fireNation.wsgi --log-file -
